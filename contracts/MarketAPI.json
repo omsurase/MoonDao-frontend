@@ -1,0 +1,482 @@
+[
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "provider_or_client",
+						"type": "string"
+					}
+				],
+				"internalType": "struct MarketTypes.AddBalanceParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "add_balance",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint64",
+				"name": "id",
+				"type": "uint64"
+			},
+			{
+				"internalType": "string",
+				"name": "label",
+				"type": "string"
+			},
+			{
+				"internalType": "int64",
+				"name": "end",
+				"type": "int64"
+			}
+		],
+		"name": "create_mock",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "raw_auth_params",
+				"type": "bytes"
+			},
+			{
+				"internalType": "address",
+				"name": "callee",
+				"type": "address"
+			}
+		],
+		"name": "publish_deal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "provider_or_client",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.WithdrawBalanceParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "withdraw_balance",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "amount_withdrawn",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.WithdrawBalanceReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "addr",
+				"type": "string"
+			}
+		],
+		"name": "get_balance",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "locked",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.GetBalanceReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealActivationParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_activation",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "int64",
+						"name": "activated",
+						"type": "int64"
+					},
+					{
+						"internalType": "int64",
+						"name": "terminated",
+						"type": "int64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealActivationReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealClientParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_client",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "client",
+						"type": "string"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealClientReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealClientCollateralParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_client_collateral",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "collateral",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealClientCollateralReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealDataCommitmentParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_data_commitment",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint64",
+						"name": "size",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealDataCommitmentReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealEpochPriceParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_epoch_price",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "price_per_epoch",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealEpochPriceReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealLabelParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_label",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "label",
+						"type": "string"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealLabelReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealProviderParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_provider",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "provider",
+						"type": "string"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealProviderReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealProviderCollateralParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_provider_collateral",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "collateral",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealProviderCollateralReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealTermParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_term",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "int64",
+						"name": "start",
+						"type": "int64"
+					},
+					{
+						"internalType": "int64",
+						"name": "end",
+						"type": "int64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealTermReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "id",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealVerifiedParams",
+				"name": "params",
+				"type": "tuple"
+			}
+		],
+		"name": "get_deal_verified",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct MarketTypes.GetDealVerifiedReturn",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
