@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const DragDropFiles = ({ setFile }) => {
-  // const [files, setFiles] = useState(null);
+  // const [files, setFile] = useState(null);
   const inputRef = useRef();
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -24,7 +24,10 @@ const DragDropFiles = ({ setFile }) => {
           <input
             type="file"
             multiple
-            onChange={(event) => setFiles(event.target.files)}
+            onChange={(event) => {
+              setFile(event.target.files[0])
+              console.log(event.target.files[0])
+            }}
             hidden
             ref={inputRef}
           />
