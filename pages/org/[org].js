@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import OrgContainer from "@/components/org/OrgContainer";
+import OrgContainer2 from "@/components/org2/OrgContainer2";
 
 const OrgPage = () => {
   const router = useRouter();
@@ -40,7 +40,8 @@ const OrgPage = () => {
               </ul>
             </div>
           </div>
-            <OrgContainer orgName={orgName} />
+          {/* <OrgContainer orgName={orgName} /> */}
+          <OrgContainer2 orgName={orgName} />
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>

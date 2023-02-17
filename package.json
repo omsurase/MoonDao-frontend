@@ -9,16 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.1.6",
-    "next": "13.1.6",
+    "@huddle01/huddle01-client": "^0.0.10",
+    "@lighthouse-web3/sdk": "^0.1.12",
+    "@livepeer/react": "^2.1.3",
+    "@livepeer/video-nft": "^0.3.6",
+    "@next/font": "13.1.5",
+    "@openzeppelin/contracts": "^4.8.1",
+    "@pushprotocol/restapi": "^0.2.2",
+    "@pushprotocol/uiweb": "^0.2.3",
+    "axios": "^1.3.1",
+    "daisyui": "^2.49.0",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "ethers": "^5.7.2",
+    "ipfs-http-client": "^60.0.0",
+    "next": "13.1.5",
+    "nft.storage": "^7.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-icons": "^4.7.1",
+    "react-router-dom": "^6.8.0",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.13.11",
+    "theme-change": "^2.3.0",
+    "web3": "^1.8.1",
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6"
+    "tailwindcss": "^3.2.4"
   }
 }
