@@ -25,7 +25,7 @@ const OrgMembers = ({ members }) => {
 
   return (
     <div>
-      <div className="overflow-x-auto m-1">
+      <div className="overflow-x-auto m-1 text-white">
         <table className="table w-fit mx-auto h-1/2 overflow-y-auto">
           <thead>
             <tr>

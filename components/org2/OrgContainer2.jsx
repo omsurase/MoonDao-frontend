@@ -78,7 +78,7 @@ const OrgContainer2 = ({ orgName }) => {
     setAddress();
   });
   return (
-    <div className="bg-white flex flex-row min-h-screen w-screen">
+    <div className="bg-white flex flex-row h-max w-screen">
       <div className={`${isOpen ? "w-1/6" : "w-1/12"} bg-[#EAFDFC]`}>
         {" "}
         {isOpen ? (

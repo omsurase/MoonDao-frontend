@@ -44,12 +44,12 @@ export default function FileDecrypt({ uid }) {
           key: the key to decrypt the file
           mimeType: default null, mime type of file
     */
-
+    console.log("key object = " + keyObject.data);
     const fileType = "image/jpeg";
     const decrypted = await lighthouse.decryptFile(
       cid,
       keyObject.data.key,
-      fileType
+      keyObject.data.mimeType
     );
     console.log(decrypted);
     /*
@@ -124,16 +124,14 @@ export default function FileDecrypt({ uid }) {
       <input type="checkbox" id="my-modal-6" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">
-            Links to decrypted files are:
-          </h3>
+          <h3 className="font-bold text-lg">Links to decrypted files are:</h3>
           <ul className="list-disc">
             {fileUrlArray &&
               fileUrlArray.map((url, index) => {
                 return (
                   url && (
                     <li key={index}>
-                        <a href={url}>Link to an item</a>
+                      <a href={url}>Link to an item</a>
                     </li>
                   )
                 );
