@@ -133,8 +133,8 @@ const OrgContainer2 = ({ orgName }) => {
       <div className="w-full bg-green">
         <MiddleSection org={org} />
       </div>
-      <div className="w-1/3 bg-[#f6f4f6]">
-        <OrgMembers members={org?.members} />
+      <div className="w-1/3 bg-[#EAFDFC]">
+        <OrgMembers members={org?.members} org={org} />
       </div>
     </div>
   );

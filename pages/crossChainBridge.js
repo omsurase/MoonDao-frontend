@@ -43,7 +43,7 @@ const SbtUpload = () => {
       description: desc,
       image: file,
     });
-    console.log(provider, signer);
+    //console.log(provider, signer);
     console.log(metadata);
     const metadataURL = GATEWAY + metadata.ipnft + "/metadata.json";
     const ipfsHash = metadata.ipnft + "/metadata.json";

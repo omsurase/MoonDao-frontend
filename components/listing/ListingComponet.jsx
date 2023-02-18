@@ -6,7 +6,7 @@ import { getMetadata, purchaseDataset } from "../../hooks/dataContract";
 import { getExampleResponse } from "../../constants/api.constants";
 import { useSigner } from "wagmi";
 import { getWalletDetails } from "@/hooks/getAddress.hook";
-
+import axios from "axios";
 const ListingComponent = ({ contractAddress }) => {
     console.log(contractAddress);
     const router = useRouter();
@@ -14,11 +14,13 @@ const ListingComponent = ({ contractAddress }) => {
     const [provider, setProvider] = useState(null);
     const [sign, setSign] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [dataUrl, setdataUrl] = useState();
     // const params = useParams();
     // const { contractAddress } = params;
 
     const buyDataset = async (priceEVM) => {
         const result = await purchaseDataset(sign, contractAddress, priceEVM);
+        const { data } = await axios.get()
         console.log(result);
     };
     useEffect(() => {
@@ -35,15 +37,17 @@ const ListingComponent = ({ contractAddress }) => {
             const res = await getMetadata(sign, contractAddress);
             console.log(res);
             const data = res?.split("|");
+            console.log(data);
             setDataset(
                 {
                     title: data[0],
                     description: data[1],
-                    priceWEI: data[2],
-                    priceEVM: data[3],
-                    keywords: data[4],
-                    createdAt: data[5],
-                    purchases: data[6],
+                    metadataurl: data[2],
+                    priceWEI: data[3],
+                    //priceEVM: data[3],
+                    keywords: data[5],
+                    createdAt: data[7],
+                    purchases: data[8],
                 } || {}
             );
             console.log(dataset)
@@ -99,7 +103,7 @@ const ListingComponent = ({ contractAddress }) => {
                         </p>
                         {dataset.priceEVM && <p>Price: {dataset.priceEVM} TFIL</p>}
                         <a
-                            href={`/listings${contractAddress}`}
+                            href={`/listings/${contractAddress}`}
                             className="inline-flex items-center text-blue-600 hover:underline"
                         >
                             Copy listing Link

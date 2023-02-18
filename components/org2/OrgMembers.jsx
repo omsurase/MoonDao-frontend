@@ -3,8 +3,9 @@ import { Chat } from "@pushprotocol/uiweb";
 import { useState, useEffect } from "react";
 import { getethAddress } from "@/hooks/getAddress.hook";
 import ChatComp from "@/components/Chat/ChatComp";
+import OrgChats from "./OrgChats";
 
-const OrgMembers = ({ members }) => {
+const OrgMembers = ({ members, org }) => {
   const [hidden, setHidden] = useState(true);
   const [hiddenGrpChats, setHiddenGrpChats] = useState(true);
   // console.log(lobbyPeers);
@@ -86,6 +87,9 @@ const OrgMembers = ({ members }) => {
             </tr> */}
           </tbody>
         </table>
+      </div>
+      <div>
+        <OrgChats orgAddress={org?.orgAddress} />
       </div>
     </div>
   );

@@ -1,19 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 import {
   APP_NAME,
   APP_SUBTITLE,
   APP_TAGS,
-  APP_DESCRIPTION
+  APP_DESCRIPTION,
 } from "@/constants/app.constants";
 import { getWalletDetails } from "@/hooks/getAddress.hook";
 
-
-
 export default function Home() {
-  
-
   return (
     <>
       <Head>
@@ -32,7 +28,7 @@ export default function Home() {
           <div className="splash-screen-content-inner relative h-full w-full z-10 flex flex-col justify-between">
             <div>
               <Image
-                src= "/images/Deca-Org Logo.png"
+                src="/images/Deca-Org Logo.png"
                 alt="Team App Logo"
                 className="splash-screen-content-inner-logo mx-auto mt-6 p-4 sm:p hover:shadow-lg rounded-full hover:px-3 hover:py-3"
                 width={350}
@@ -55,12 +51,11 @@ export default function Home() {
             <button
               type="button"
               className="md:mt-12 w-full md:w-1/2 h-20 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 rounded-lg text-2xl px-5 py-2.5 text-center mr-2 mb-2"
-              onClick={async () =>{
-                const {address} =  await getWalletDetails()
-                if (address)
-                  window.location.href = '/login'
+              onClick={async () => {
+                const { address } = await getWalletDetails();
+                if (address) window.location.href = "/login";
               }}
-           >
+            >
               <pre className="text-sm">Connect with us!</pre>
               Connect wallet
             </button>

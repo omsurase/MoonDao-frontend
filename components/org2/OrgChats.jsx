@@ -33,10 +33,10 @@ const OrgChats = ({ orgAddress, orgChatss, orgName }) => {
   //   setOrgChats(orgChatss);
   // }, [orgChatss]);
   return (
-    <div className="my-4 mx-4">
-      <div className="flex flex-col bg-base-300 h-3/4 overflow-y-auto m-4 pb-4 mt-10 rounded-2xl">
+    <div className="my-4 mx-4 border-2 border-dashed border-grey-500 rounded">
+      <div className="flex flex-col bg-white mb-2 bg-whiteborder-2 border-dashed border-black  h-3/4 overflow-y-auto m-4 pb-4 mt-10 rounded-2xl">
         <button
-          className="text-2xl btn-outline btn-accent mx-auto m-4 p-2 w-fit"
+          className="text-2xl btn-outline  btn-accent mx-auto m-4 p-2 w-fit"
           onClick={() => {
             const getChats = async () => {
               if (orgAddress === undefined) return;
@@ -82,15 +82,15 @@ const OrgChats = ({ orgAddress, orgChatss, orgName }) => {
             );
           })}
       </div>
-      <div className="flex mx-5 bg-base-300 p-4 rounded-2xl">
+      <div className="flex mx-5 bg-white p-4 rounded-2xl">
         <input
           type="text"
           placeholder="Type here"
-          className="input input-bordered input-primary w-5/6 mx-auto "
+          className="input input-bordered input-primary mx-2 w-5/6  px-4 bg-slate-500 "
           onChange={(e) => setUserChat(e.target.value)}
         />
         <button
-          className="btn btn-outline btn-accent mr-2"
+          className="btn btn-outline btn-accent mr-2 "
           onClick={() => {
             AxiosJsInstance.post("/api/orgChat/addChat", {
               orgAddress: orgAddress,

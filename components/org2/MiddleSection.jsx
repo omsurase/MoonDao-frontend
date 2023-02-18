@@ -9,7 +9,7 @@ const MiddleSection = ({ org }) => {
       <HeroSection orgName={org?.orgName} tagline={org?.orgAddress} />
       <LighthouseContainer orgAddress={org?.orgAddress} />
       {/* <hr /> */}
-      <OrgChats orgAddress={org?.orgAddress} />
+      {/* <OrgChats orgAddress={org?.orgAddress} /> */}
     </div>
   );
 };
