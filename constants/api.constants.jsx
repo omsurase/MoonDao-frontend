@@ -8,3 +8,8 @@ export const huddleClient = getHuddleClient(
 export const ipfsClient = create("https://ipfs.infura.io:5001/api/v0");
 
 export const GATEWAY = 'https://dweb.link/ipfs/'
+
+export const getExampleResponse = () => ({
+  ...EXAMPLE_FORM,
+  purchases: 0,
+})
