@@ -10,7 +10,6 @@ import { createDeal } from "../utils/creatDeal";
 import Link from "next/link";
 import { getWalletDetails } from "@/hooks/getAddress.hook";
 
-
 const UploadImage = () => {
   const [image, setImage] = useState(null);
   const [imgUrl, setImgUrl] = useState(null);
@@ -51,26 +50,19 @@ const UploadImage = () => {
     const ipfsHash = metadata.ipnft + "/metadata.json";
     let dealId = Math.floor(Math.random() * 10000);
     alert("Creating a storage deal with filecoin...");
-    await createDeal(
-      provider,
-      signer,
-      dealId,
-      ipfsHash,
-      1000_000
-    );
+    await createDeal(provider, signer, dealId, ipfsHash, 1000_000);
     const { data } = await axios.get(metadataURL);
     console.log(data);
     console.log(GATEWAY + data.image.slice(7));
     setImgUrl(GATEWAY + data.image.slice(7));
     setMintUrl(metadata.url);
     await mintSBT(mintUrl, receiverEthAddress);
-
   };
 
   return (
-    <div>
-      <div className="w-full w-3/4 mx-auto mt-5">
-        <form className="bg-base-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="min-h-screen h-max w-full bg-white pt-10">
+      <div className="w-fit mx-auto mt-5">
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border-black">
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"

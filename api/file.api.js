@@ -8,7 +8,10 @@ const addFile = async (type, cid, name, orgAddress) => {
     cid,
     orgAddress,
   });
-  if (data) window.alert(data.message);
+  if (data) {
+    window.alert(data.message);
+    return data;
+  }
 };
 
 const getFiles = async (orgAddress) => {

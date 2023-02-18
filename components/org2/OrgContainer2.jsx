@@ -15,6 +15,7 @@ import { AiFillVideoCamera } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { RiImageAddFill } from "react-icons/ri";
 import { BsFolderFill } from "react-icons/bs";
+import { BsCardList } from "react-icons/bs";
 
 const OrgContainer2 = ({ orgName }) => {
   const [team, setTeam] = React.useState([]);
@@ -54,6 +55,11 @@ const OrgContainer2 = ({ orgName }) => {
       title: "My Video Assets",
       icon: <BsFolderFill />,
       link: "/upload/" + orgName,
+    },
+    {
+      title: "Create listing",
+      icon: <BsCardList />,
+      link: "/crossChainBridge",
     },
   ];
 
