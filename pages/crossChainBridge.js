@@ -53,12 +53,13 @@ const SbtUpload = () => {
     console.log(GATEWAY + data.image.slice(7));
     setFileUrl(GATEWAY + data.image.slice(7));
     setMintUrl(metadata.url);
+    console.log(metadata.url);
     //await mintSBT(mintUrl, receiverEthAddress);
     const contract1 = await deployContract(
       signer,
       name,
       desc,
-      metadata.ipnft,
+      metadata.url.slice(6),
       price,
       Keywords
     );

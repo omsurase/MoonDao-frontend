@@ -2,6 +2,7 @@ import { GATEWAY } from "@/constants/api.constants.jsx";
 import { BigNumber, ethers } from "ethers";
 import { DATAMARKET_CONTRACT } from "../contracts/listingContract.js";
 import { getWalletDetails } from "./getAddress.hook.js";
+import { useState } from "react";
 
 // const getSigner = async () => {
 //     await window.ethereum.enable();
@@ -11,6 +12,7 @@ import { getWalletDetails } from "./getAddress.hook.js";
 // };
 
 // https://dapp-world.com/smartbook/how-to-use-ethers-with-fevm-k5Hn
+
 export async function deployContract(
   signer,
   title,
