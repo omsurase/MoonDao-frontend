@@ -1,25 +1,37 @@
 import React from "react";
+import AllFiles from "./AllFiles";
 import FileDecrypt from "./FileDecrypt";
 import FileEncrypt from "./FileEncrypt";
 
-const LighthouseContainer = () => {
-    const [cid, setCid] = React.useState(null);
+const LighthouseContainer = ({ orgAddress }) => {
+  const [cid, setCid] = React.useState(null);
   return (
-    <div className="mt-8">
+    <div className="mt-8 bg-white">
       <br />
-      <div className="card w-96 bg-primary text-primary-content mx-auto">
+      {/* <div className="card w-96 bg-primary text-primary-content mx-auto">
         <div className="card-body">
           <h2 className="card-title">Secure file storage</h2>
-          <p>Need a place to store files securely? Encrypt your files using LightHouse!</p>
+          <p>
+            Need a place to store files securely? Encrypt your files using
+            LightHouse!
+          </p>
           <div className="card-actions justify-end m-2">
-          <FileEncrypt setCid={setCid} />
+            <FileEncrypt setCid={setCid} />
           </div>
         </div>
+      </div> */}
+      <p className="text-black w-fit mx-auto">
+        Need a place to store files securely? Encrypt your files using
+        LightHouse!
+      </p>
+      <div className="m-2">
+        <FileEncrypt orgAddress={orgAddress} />
       </div>
-    <div className="m-4 text-center">
-      <h1 className="text-xl text-center">Wanna see all encrypted files?  </h1>
-      <FileDecrypt />
-    </div>
+      <div className="m-4 text-center text-black">
+        <h1 className="text-xl text-center">Here are your encrypted files! </h1>
+        {/* <FileDecrypt /> */}
+        <AllFiles orgAddress={orgAddress} />
+      </div>
     </div>
   );
 };

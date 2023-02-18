@@ -33,8 +33,8 @@ const OrgChats = ({ orgAddress, orgChatss, orgName }) => {
   //   setOrgChats(orgChatss);
   // }, [orgChatss]);
   return (
-    <div>
-      <div className="flex flex-col w-full bg-base-300 h-3/4 overflow-y-auto m-4 pb-4">
+    <div className="my-4 mx-4">
+      <div className="flex flex-col bg-base-300 h-3/4 overflow-y-auto m-4 pb-4 mt-10 rounded-2xl">
         <button
           className="text-2xl btn-outline btn-accent mx-auto m-4 p-2 w-fit"
           onClick={() => {
@@ -53,7 +53,7 @@ const OrgChats = ({ orgAddress, orgChatss, orgName }) => {
             getChats();
           }}
         >
-          Get latest Chats
+          Chatbox ↻
         </button>
         <hr />
         <br />
@@ -82,7 +82,7 @@ const OrgChats = ({ orgAddress, orgChatss, orgName }) => {
             );
           })}
       </div>
-      <div className="w-full flex mx-5 bg-base-300 p-4">
+      <div className="flex mx-5 bg-base-300 p-4 rounded-2xl">
         <input
           type="text"
           placeholder="Type here"
