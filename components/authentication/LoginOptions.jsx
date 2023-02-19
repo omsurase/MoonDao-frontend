@@ -4,9 +4,9 @@ import Link from "next/link";
 
 function LoginOptions() {
   return (
-    <div className="flex flex-col sm:flex-row my-10 py-10 w-full steps">
+    <div className="flex flex-col sm:flex-row pt-10 py-10 w-full steps">
       <div className="mx-auto">
-        <div className="card w-96 bg-base-300 shadow-xl m-4 ">
+        <div className="card w-96 bg-white shadow-xl m-4 ">
           <div className="card-body">
             <h2 className="card-title text-2xl">Create an organization!</h2>
             <div className="ml-9">
@@ -37,9 +37,12 @@ function LoginOptions() {
       <div className="mx-auto">
         <div className="card w-96 bg-white shadow-xl m-4">
           <div className="card-body">
-            <h2 className="card-title text-black text-2xl">Join an Organization!</h2>
+            <h2 className="card-title text-black text-2xl">
+              Join an Organization!
+            </h2>
             <div className="text-black">
-              You should have an invitational Soul Bound Token to join an organisation.
+              You should have an invitational Soul Bound Token to join an
+              organisation.
             </div>
             <div className="card-actions justify-end">
               <Modal
