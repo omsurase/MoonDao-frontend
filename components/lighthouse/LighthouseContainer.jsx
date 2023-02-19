@@ -21,8 +21,7 @@ const LighthouseContainer = ({ orgAddress }) => {
         </div>
       </div> */}
       <p className="text-black w-fit mx-auto">
-        Need a place to store files securely? Encrypt your files using
-        LightHouse!
+        Need a place to store files securely? Encrypt your files using MoonDAO!
       </p>
       <div className="m-2">
         <FileEncrypt orgAddress={orgAddress} />

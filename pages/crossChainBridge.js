@@ -119,8 +119,12 @@ const SbtUpload = () => {
   ];
 
   return (
-    <div className="flex flex-row h-screen">
-      <div className={` ${isOpen ? "w-1/6" : "w-1/12"} bg-[#EAFDFC]`}>
+    <div className="flex flex-row h-full">
+      <div
+        className={`min-h-screen h-max ${
+          isOpen ? "w-1/6" : "w-1/12"
+        } bg-[#EAFDFC]`}
+      >
         {" "}
         {isOpen ? (
           // close button
