@@ -4,7 +4,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useEffect } from 'react';
 import fetchAssets from '@/api/livepeervideo.api';
-import HeroSection from '../org/HeroSection';
+import HeroSection from '../org2/HeroSection';
 
 
 export default function UploadVideoAsset() {
@@ -86,13 +86,13 @@ export default function UploadVideoAsset() {
 
 
   return (
-    <div>
-      <HeroSection orgName="📹 DecaOrg Video Assets" />
+    <div className='bg-[#EAFDFC]'>
+      <HeroSection orgName="📹 MoonDao Video Assets" />
 
 
-      <div className=" grid grid-cols-2 gap-4">
+      <div className=" grid grid-cols-2 text-black gap-4 bg-[#EAFDFC]">
         <div className='border-4 border-indigo-500 rounded-lg'>
-          <h1 className='text-bold text-2xl text-center underline p-4'>Uploaded Assets:</h1>
+          <h1 className='text-bold  text-2xl text-center underline p-4'>Uploaded Assets:</h1>
           {assets && assets.map((asset) => (
             <div key={asset.id} className='p-2 m-2 border-2 border-indigo-500 rounded-lg ' onClick={() => {
 
@@ -121,8 +121,8 @@ export default function UploadVideoAsset() {
           {!asset && (
             <div>
               <div className='flex flex-row p-4 m-4'>
-              <h1 className='p-4 underline'>Assets Uploaded Using: </h1>
-               <img  src="../images/Livepeer.png" className='object-center' alt="livepeer" width="50" height="50" />
+                <h1 className='p-4 underline'>Assets Uploaded Using: </h1>
+                <img src="../images/Livepeer.png" className='object-center' alt="livepeer" width="50" height="50" />
               </div>
 
               <div className='flex-initial w-64  m-4 border-solid border-2 border-indigo-500/50 p-10' {...getRootProps()}>
