@@ -23,7 +23,7 @@ const ListingComponent = ({ contractAddress }) => {
   const buyDataset = async (priceEVM) => {
     const result = await purchaseDataset(sign, contractAddress, priceEVM);
     console.log(result);
-    setdataUrl(true);
+    if (result) setdataUrl(true);
   };
   useEffect(() => {
     console.log("object");
@@ -178,7 +178,7 @@ const ListingComponent = ({ contractAddress }) => {
                   }}
                 >
                   {" "}
-                  <h5 className="mb-2 text-xl font-semibold tracking-tight text-success">
+                  <h5 className="mb-2 text-xl font-semibold tracking-tight text-success pointer">
                     Download the dataset
                   </h5>
                 </div>

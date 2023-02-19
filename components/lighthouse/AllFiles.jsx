@@ -129,46 +129,48 @@ const AllFiles = ({ orgAddress }) => {
                 </thead>
                 <tbody>
                   {files &&
-                    files.map((file, i) => {
-                      return (
-                        <tr
-                          key={i}
-                          className={
-                            i % 2 == 0
-                              ? `bg-gray-100 border-b`
-                              : `bg-white border-b`
-                          }
-                        >
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            {i + 1}
-                          </td>
-                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            {file.name}
-                          </td>
-                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <button
-                              className="btn btn-primary btn-sm"
-                              onClick={() => decrypt(file.cid, file.type)}
-                            >
-                              Decrypt File
-                            </button>
-                          </td>
-                          <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            {file.URL ? (
-                              <a
-                                className="link"
-                                href={file.URL}
-                                target="_blank"
+                    files
+                      .map((file, i) => {
+                        return (
+                          <tr
+                            key={i}
+                            className={
+                              i % 2 == 0
+                                ? `bg-gray-100 border-b`
+                                : `bg-white border-b`
+                            }
+                          >
+                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                              {files.length - i}
+                            </td>
+                            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                              {file.name}
+                            </td>
+                            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                              <button
+                                className="btn btn-primary btn-sm"
+                                onClick={() => decrypt(file.cid, file.type)}
                               >
-                                Open your file!
-                              </a>
-                            ) : (
-                              <p>-</p>
-                            )}
-                          </td>
-                        </tr>
-                      );
-                    })}
+                                Decrypt File
+                              </button>
+                            </td>
+                            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                              {file.URL ? (
+                                <a
+                                  className="link"
+                                  href={file.URL}
+                                  target="_blank"
+                                >
+                                  Open your file!
+                                </a>
+                              ) : (
+                                <p>-</p>
+                              )}
+                            </td>
+                          </tr>
+                        );
+                      })
+                      .reverse()}
                 </tbody>
               </table>
             </div>

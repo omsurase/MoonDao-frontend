@@ -6,6 +6,7 @@ import { APP_DOMAIN } from "@/constants/app.constants";
 import { getOrganization } from "@/api/org.api";
 import OrgMembers from "./OrgMembers";
 import { getethAddress } from "@/hooks/getAddress.hook";
+import CrossChainBridge from "../crosschainbridge/CrossChainBridge";
 
 import Sidebar from "./Sidebar";
 import MiddleSection from "./MiddleSection";
@@ -141,6 +142,35 @@ const OrgContainer2 = ({ orgName }) => {
       </div>
       <div className="w-1/3 bg-[#EAFDFC]">
         <OrgMembers members={org?.members} org={org} />
+        <div className="host-controls ">
+          {/* The button to open modal */}
+          <label
+            htmlFor="my-modal"
+            className="btn  bg-[#f71953] text-white  text-xs  m-3 w-96  "
+          >
+            Cross-chain token exchange
+          </label>
+
+          {/* Put this part before </body> tag */}
+          <input type="checkbox" id="my-modal" className="modal-toggle" />
+          <div className="modal">
+            <div className="modal-box">
+              <h3 className="font-bold text-lg mb-4">
+                Cross-chain token exchange
+              </h3>
+              <br />
+              <CrossChainBridge />
+              <div className="modal-action">
+                <label
+                  htmlFor="my-modal"
+                  className="btn bg-[#f71953] text-white  text-xs  m-3 w-96  "
+                >
+                  Close
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

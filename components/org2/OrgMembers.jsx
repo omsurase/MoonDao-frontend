@@ -44,7 +44,11 @@ const OrgMembers = ({ members, org }) => {
                   <tr key={index} className={index % 2 === 0 ? `active` : ""}>
                     <th>{index + 1}</th>
                     <td>{member.memberName}</td>
-                    <td>{member.memberEthAddress}</td>
+                    <td>
+                      {member.memberEthAddress?.slice(0, 4) +
+                        "..." +
+                        member.memberEthAddress?.slice(-2)}
+                    </td>
                     <td>{member.team}</td>
                     <td
                       onClick={() => {
