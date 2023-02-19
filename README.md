@@ -7,9 +7,8 @@
 
 ## 🧐 Problem Statement <a name="#problem-statement"> </a>
 
-* `Storage providers` and utility protocols are critical components of the filecoin ecosystem because they provide a variety of critical services to filecoin users. Storage providers are currently viewed as individual, single-person entities providing **provable storage** services via the `filecoin market place` in the current filecoin ecosystem.
-* Storage providers do not consider the possibility of `multiple storage providers` providing storage as service in the form of a single entity.
-* Other than this filecoin also lacks utility protocols that are built directly on filecoin and provide provable storage on the filecoin chain.
+* Currently DataDaos, startups, bussinesses have to use multiple apps like google drive, slack/discord, zoom/ google meet and third party market places to see their pervices or products which is very inefficient process. MoonDao is one stop solution to this it provides file encryption , decryption , sharing , chating , video conferring and much more.
+* Some extra features that are new with MoonDao are creation of dynamic listing pages through which data daos can sell their data and they can share or advertise links of this page where ever they want. Other than that all the organisations that are made on moondao are soulbound token gated thus creator of an org nees to issue an soul bound token from his organisation on moon dao to new member 
 
 This limits the potential of filecoin and makes it difficult for teams to shift to filecoin and work to their full potential.
 
