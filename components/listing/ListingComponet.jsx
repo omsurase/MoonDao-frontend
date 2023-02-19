@@ -7,6 +7,8 @@ import { GATEWAY, getExampleResponse } from "../../constants/api.constants";
 import { useSigner } from "wagmi";
 import { getWalletDetails } from "@/hooks/getAddress.hook";
 import axios from "axios";
+import { FaRegFlag } from "react-icons/fa";
+
 const ListingComponent = ({ contractAddress }) => {
   console.log(contractAddress);
   const router = useRouter();
@@ -102,8 +104,12 @@ const ListingComponent = ({ contractAddress }) => {
               {dataset.description}
             </p>
             {dataset.priceEVM && <p>Price: {dataset.priceEVM} TFIL</p>}
-            <a
+            <div
               href={`/listings/${contractAddress}`}
+              onClick={() => {
+                navigator.clipboard.writeText(`/listings/${contractAddress}`);
+                alert("Copied to clipboard");
+              }}
               className="inline-flex items-center text-blue-600 hover:underline"
             >
               Copy listing Link
@@ -116,7 +122,7 @@ const ListingComponent = ({ contractAddress }) => {
                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
               </svg>
-            </a>
+            </div>
             <br />
             <div
               href="#"
@@ -139,6 +145,11 @@ const ListingComponent = ({ contractAddress }) => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
+            </div>
+            {/* <br /> */}
+            <div className="inline-flex items-center px-3 py-2 my-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 pointer mx-4">
+              <div className="w-fit pr-2">Flag dataset</div>
+              <FaRegFlag />
             </div>
             <hr />
             {dataset.keywords &&
