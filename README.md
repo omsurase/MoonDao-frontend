@@ -46,6 +46,8 @@ Both the repositories need to be `git cloned` for the project to work. `README.m
 - [NextJs](https://nextjs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
+## Contract Addresses
+- SBT - 0x9144Bee2672448b83820d82ef21281380e95d696
 ## ✍️ Authors <a name = "authors"></a>
 
 [Soham Ratnaparkhi](https://github.com/SohamRatnaparkhi), [Om Surase](https://github.com/omsurase)
