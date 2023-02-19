@@ -3,7 +3,7 @@ import React from "react";
 const HeroSection = ({ orgName, tagline, image }) => {
   return (
     <div>
-      <div className="hero max-h/2-screen bg-white text-black">
+      <div className="hero max-h/2-screen bg-[#EAFDFC] text-black">
         <div className="hero-content flex-col lg:flex-row">
           {/* <img
             src="../images/Deca-Org Logo.png"
