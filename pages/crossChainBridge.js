@@ -16,6 +16,7 @@ import { RiImageAddFill } from "react-icons/ri";
 import { BsFolderFill } from "react-icons/bs";
 import { BsCardList } from "react-icons/bs";
 import Sidebar from "@/components/org2/Sidebar";
+import { createDeal } from "../utils/creatDeal";
 
 const SbtUpload = () => {
   const [image, setImage] = useState(null);
@@ -43,6 +44,7 @@ const SbtUpload = () => {
 
   const handleSubmit = async () => {
     //console.log(image);
+
     const client = new NFTStorage({
       token:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDg0MWI1RGRjMGU4MWI4QUYyZWI0NURBN0QzMTAzNjNjNTk1RTY1MTciLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY3NDkwOTY5NDAzMiwibmFtZSI6ImRlY2Etb3JnIn0.GlZgUARw9EP_pA9fin75GdDIlLmk_b6uR-QM5G4bs-k",
@@ -63,6 +65,9 @@ const SbtUpload = () => {
     setFileUrl(GATEWAY + data.image.slice(7));
     setMintUrl(metadata.url);
     console.log(metadata.url);
+    let dealId = Math.floor(Math.random() * 10000);
+    alert("Creating a storage deal with filecoin...");
+    await createDeal(provider, signer, dealId, ipfsHash, 1000_000);
     //await mintSBT(mintUrl, receiverEthAddress);
     const contract1 = await deployContract(
       signer,
