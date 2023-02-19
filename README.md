@@ -1,42 +1,52 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="" rel="noopener">
+ <img src="https://user-images.githubusercontent.com/92905626/219963934-5bccf2b3-6e5f-4098-a6b0-e99243749902.png" alt="Project logo"></a>
+</p>
+<h3 align="center">MoonDAO</h3>
 
-## Getting Started
 
-First, run the development server:
+## 🧐 Problem Statement <a name="#problem-statement"> </a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* `Storage providers` and utility protocols are critical components of the filecoin ecosystem because they provide a variety of critical services to filecoin users. Storage providers are currently viewed as individual, single-person entities providing **provable storage** services via the `filecoin market place` in the current filecoin ecosystem.
+* Storage providers do not consider the possibility of `multiple storage providers` providing storage as service in the form of a single entity.
+* Other than this filecoin also lacks utility protocols that are built directly on filecoin and provide provable storage on the filecoin chain.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This limits the potential of filecoin and makes it difficult for teams to shift to filecoin and work to their full potential.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 💡 Idea / Solution <a name="#idea"> </a>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **MoonDAO**, which is built on top of `F(E)VM` is one stop solution, to above problems and provides extensive features as stated below.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- MoonDAO gives a complete infrastructure for organisations/ DOAs/ groups of storage providers to completely shift their day to day operations to the Hyperspace testnet.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- MoonDAO is a decentralized platform built using filecoin virtual machine that that leverages filecoin storage providers to provides a 
+digital workspace for startups, businesses and data DAOs to mainly  store, manage their files securely and create sharable pages to sell their data. 
 
-## Learn More
+![image](https://user-images.githubusercontent.com/92905626/219964272-4ea24297-e026-40fa-9bab-a35e4077bca0.png)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Features <a name="#future-scope"> </a>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![image](https://user-images.githubusercontent.com/92905626/219964166-8104126b-15b4-4299-ad20-3b38fc7fa049.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🏁 Getting Started <a name="#getting-started"> </a>
 
-## Deploy on Vercel
+There are to sister repositories of MoonDAO. They are
+- [MoonDAO frontend](https://github.com/omsurase/MoonDao-frontend)
+- [MoonDAO backend](https://github.com/omsurase/MoonDao-Backend)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Both the repositories need to be `git cloned` for the project to work. `README.md` files will guide you while setting up the repositories.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-=======
-# MoonDao
->>>>>>> 03e3e556e03287405122e9048f55d2d9cdd445a4
+## ⛏️ Built With <a name = "tech-stack"></a>
+
+- [Solidity](https://soliditylang.org/) - Smart contracts
+- [F(E)VM](https://fvm.filecoin.io/) - Deploying smart contracts
+- [LivePeer](https://livepeer.org/) - Streaming and video NFT minting
+- [Push(EPNS)](https://push.org/) - Communication and organization chats
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [NextJs](https://nextjs.org/) - Web Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+
+## ✍️ Authors <a name = "authors"></a>
+
+[Soham Ratnaparkhi](https://github.com/SohamRatnaparkhi), [Om Surase](https://github.com/omsurase)
