@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Sidebar = ({ options, isOpen, setOpen }) => {
   const styles = {
@@ -9,7 +9,23 @@ const Sidebar = ({ options, isOpen, setOpen }) => {
       "text-black bg-[#EAFDFC] focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center  w-full",
   };
 
+  const activeBtn = {
+    org: "Home",
+    sbt: "Add a member",
+    crossChainBridge: "Create listing",
+  };
+
   const [selected, setSelected] = React.useState("Home");
+
+  useEffect(() => {
+    if (window.location.pathname) {
+      console.log(window.location.pathname.split("/")[1]);
+      setSelected(activeBtn[window.location.pathname.split("/")[1]]);
+    } else {
+      setSelected("");
+      console.log("no one selected");
+    }
+  }, [selected]);
 
   return (
     <div>
