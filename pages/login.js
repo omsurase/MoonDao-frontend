@@ -92,7 +92,7 @@ export default function VerifyMessage() {
   };
 
   return (
-    <div>
+    <div className=" bg-[#81c8dc] min-h-min h-full max-h-full">
       {/* <form className="m-4" onSubmit={handleVerification}>
         <div className="credit-card w-full shadow-lg mx-auto rounded-xl bg-base-200">
           <main className="mt-4 p-4">
