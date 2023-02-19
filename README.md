@@ -50,6 +50,12 @@ Both the repositories need to be `git cloned` for the project to work. `README.m
 - SBT - 0x9144Bee2672448b83820d82ef21281380e95d696
 - Bridge contract on Filecoin - 0x6dFA65048C6013378a122544224980789f96542E
 - Bridge contract on Matic - 0xAd3EDd9eB29Cc351988C45C524f743EccE9aEabA
+- Filecoin Market Api - 0x94933a70ccffb17e9f41ac36e6fe4f5f70c9cbcb
+
+organisation contracts and sharable listing page contracts are deployed dynamically using contract factory.
+
+contract address of token contracts are private.
+
 ## ✍️ Authors <a name = "authors"></a>
 
 [Soham Ratnaparkhi](https://github.com/SohamRatnaparkhi), [Om Surase](https://github.com/omsurase)
